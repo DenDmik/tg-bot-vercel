@@ -2,7 +2,11 @@ import TeleBot from "telebot"
 
 const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN)
 
-bot.on("text", msg => msg.reply.text(msg.chat.id))
+bot.on("text", (msg) =>{ msg.reply.text(msg.chat.id)
+  if(text === '/start'){
+        bot.sendSticker(chatId,'https://tlgrm.eu/_/stickers/ea5/382/ea53826d-c192-376a-b766-e5abc535f1c9/1.webp') 
+      }}
+)
 
 // bot.on('message',async (msg) => {
 //     console.log(msg.from.username)

@@ -30,7 +30,7 @@ bot.on(['/start'], msg => {
             bot.inlineButton('callback', {callback: 'this_is_data'}),
             bot.inlineButton('inline', {inline: 'some query'})
         ], [
-            bot.inlineButton('url', {url: 'https://telegram.org'})
+            bot.inlineButton('url', {url: 'https://next-deploy-dun.vercel.app/'})
         ]
     ]);
 

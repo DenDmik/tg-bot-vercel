@@ -7,7 +7,7 @@ const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN)
 //   }
 // )
  const replyMarkup = bot.keyboard([
-      [ '/inlineKeyboard'],
+      [ '/inlineKeyboard', bot.button('WebApp', 'contact')],
       ['/start', '/hello']
   ], {resize: true});
 
@@ -16,6 +16,7 @@ bot.on(['/start'], msg => {
   return bot.sendMessage(msg.chat.id, 'Keyboard example.', {replyMarkup});
 
 });
+bot.on('contact',(msg)=>msg.url('https://next-deploy-dun.vercel.app/'))
 
 // bot.on('/start',msg=>{bot.sendSticker(msg.chat.id, 'https://tlgrm.eu/_/stickers/ea5/382/ea53826d-c192-376a-b766-e5abc535f1c9/1.webp')})
 
@@ -30,7 +31,7 @@ bot.on(['/start'], msg => {
             bot.inlineButton('callback', {callback: 'this_is_data'}),
             bot.inlineButton('inline', {inline: 'some query'})
         ], [
-            bot.inlineButton('url', {url: 'https://next-deploy-dun.vercel.app/'})
+            bot.inlineButton('url',  {url: 'https://next-deploy-dun.vercel.app/'})
         ]
     ]);
 

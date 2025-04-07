@@ -23,7 +23,7 @@ bot.on(['/start'], msg => {
     return bot.sendMessage(msg.chat.id, `Hello, ${ msg.from.first_name }!`);
   });
   bot.on("/WebApp", (msg)=>{
-   msg.reply.url('https://next-deploy-dun.vercel.app/')
+   msg.url('url', {url: 'https://telegram.org'})
   console.log(msg.chat.url)})
 
 export default bot

@@ -16,7 +16,7 @@ bot.on(['/start'], msg => {
   return bot.sendMessage(msg.chat.id, 'Keyboard example.', {replyMarkup});
 
 });
-bot.on('contact',(msg)=>msg.url('https://next-deploy-dun.vercel.app/'))
+// bot.on('contact',(msg)=>msg.url('https://next-deploy-dun.vercel.app/'))
 
 // bot.on('/start',msg=>{bot.sendSticker(msg.chat.id, 'https://tlgrm.eu/_/stickers/ea5/382/ea53826d-c192-376a-b766-e5abc535f1c9/1.webp')})
 
@@ -31,7 +31,7 @@ bot.on('contact',(msg)=>msg.url('https://next-deploy-dun.vercel.app/'))
             bot.inlineButton('callback', {callback: 'this_is_data'}),
             bot.inlineButton('inline', {inline: 'some query'})
         ], [
-            bot.inlineButton('url',  {url: 'https://next-deploy-dun.vercel.app/'})
+            bot.inlineButton('url',  {url: 'https://8ab5-185-102-186-226.ngrok-free.app'})
         ]
     ]);
 
